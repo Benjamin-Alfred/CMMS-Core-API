@@ -29,12 +29,12 @@
 16|The system will allow for editing equipment details.
 17|The system will allow for deleting equipment.
 18|The system will contain all facilities as contained in the country-wide master facility list (MFL).
-19|The system will allow for adding new facilities to the facilities list. The details captured include:<br />a. the equipment<br />b. the equipment serial number<br />c. the facility
+19|The system will allow for adding new facilities to the facilities list.
 20|The system will allow for updating facilities.
 21|The system will allow for deleting facilities.
-22|The system will allow for adding an equipment to a facility.
+22|The system will allow for adding an equipment to a facility. The details captured include:<br />a. the equipment<br />b. the equipment serial number<br />c. the commissioning date d. the servicing frequency (in days)
 23|The system will allow for removing an equipment from a facility. The reason for the deletion should be provided.
-24|The system will allow for recording of the equipment serviced. The details captured include:<br />a. the engineer servicing the equipment<br />b. date of service<br />c. equipment serviced<br />The system should also be able to record equipment specific metrics. For biosafety cabinets, the system will record:<br />- the final set points intake<br />- final set points downflow<br />- HEPA filter test supply<br />- HEPA filter test exhaust<br />- smoke test<br />- whether the quipment has ever been serviced<br />- any recommendations
+24|The system will allow for recording of the equipment serviced. The details captured include:<br />a. the engineer servicing the equipment<br />b. date of service<br />c. equipment serviced<br />The system should also be able to record equipment specific metrics. For biosafety cabinets, the system will record:<br />- the final set points intake<br />- final set points downflow<br />- HEPA filter test supply<br />- HEPA filter test exhaust<br />- smoke test<br />- whether the equipment has ever been serviced<br />- any recommendations
 
 ## Reports
 
