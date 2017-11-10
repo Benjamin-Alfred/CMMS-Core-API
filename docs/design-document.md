@@ -66,7 +66,7 @@ updateEquipment(brand_name, description)<br />deleteEquipment()|
 
 **EquipmentProperty**|
 ---------|
-id primary key<br />equipment_id<br />name<br />type: {"FREETEXT", "OPTIONSLIST", "NUMERIC"}<br />|
+id primary key<br />equipment_id<br />name<br />type: {"FREETEXT", "OPTIONSLIST", "NUMERIC", "GROUP"}<br />|
 updateProperty(name)<br />deleteProperty()|
 
 **EquipmentPropertyOption**|
@@ -76,7 +76,7 @@ updatePropertyOption(name)<br />deletePropertyOption()|
 
 **EquipmentPropertyRange**|
 ---------|
-id primary key<br />equipment_property_id<br />lower_limit<br />upper_limit<br />unit<br />|
+id primary key<br />equipment_property_id<br />lower_limit<br />upper_limit<br />unit<br />group_id<br />|
 updatePropertyRange(lower_limit, upper_limit, unit)<br />deletePropertyRange()|
 
 **MasterFacilitiesList**|
@@ -90,7 +90,7 @@ id primary key<br />equipment_id<br />user_id<br />date_of_service<br />recommen
 
 **EquipmentPropertyValue**|
 ---------|
-id primary key<br />equipment_service_id<br />equipment_property_id<br />value<br />|
+id primary key<br />equipment_service_id<br />equipment_property_id<br />value<br />group_id<br />|
 updatePropertyValue(name)<br />deletePropertyValue()|
 
 ### 3.3 Database Design
