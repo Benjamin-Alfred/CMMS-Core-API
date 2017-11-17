@@ -19,7 +19,7 @@ class AuthController extends BaseController
     public function authenticate(Request $request)
     {
         // grab credentials from the request
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email_address', 'password');
 
         try {
             // attempt to verify the credentials and create a token for the user
@@ -43,10 +43,15 @@ class AuthController extends BaseController
 
     public function register(UserRequest $request)
     {
+        $password = substr(bin2hex(random_bytes(32)), 0, 7);
         $newUser = [
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'password' => bcrypt($request->get('password')),
+            'first_name' => $request->get('first_name'),
+            'middle_name' => $request->get('middle_name'),
+            'last_name' => $request->get('last_name'),
+            'email_address' => $request->get('email_address'),
+            'mobile_phone' => $request->get('mobile_phone'),
+            'organizational_affiliation' => $request->get('organizational_affiliation'),
+            'password' => bcrypt($password),
         ];
         $user = User::create($newUser);
         $token = JWTAuth::fromUser($user);

@@ -5,7 +5,7 @@ Computerized maintenance management system (CMMS) maintains a computer database 
 
 ### Step 1: Clone the repo
 
-    `git clone ...`
+    git clone git@github.com:APHLK/CMMS.git
 
 ### Step 2: Prerequisites
 

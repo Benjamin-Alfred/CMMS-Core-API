@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'nphleqa@gmail.com', 'name' => 'NPHL CMMS Administrator'],
 
     /*
     |--------------------------------------------------------------------------
