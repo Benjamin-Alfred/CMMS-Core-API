@@ -13,12 +13,12 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->insert([
             'first_name' => 'Administrator',
-            'middle_name' => 'Administrator',
-        	'last_name' => 'Administrator',
+            'middle_name' => '.',
+            'last_name' => 'Superuser',
             'email_address' => 'mapesa@gmail.com',
             'mobile_phone' => '+254788492586',
             'organizational_affiliation' => 'Association of Public Health Laboratories',
-        	'password' => bcrypt('admin')
+            'password' => bcrypt('admin')
     	]);
     }
 }
