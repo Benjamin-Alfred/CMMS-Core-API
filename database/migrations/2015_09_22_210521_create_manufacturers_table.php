@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDogsTable extends Migration
+class CreateManufacturersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,10 @@ class CreateDogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('dogs', function (Blueprint $table) {
+        Schema::create('manufacturers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->tinyInteger('age');
+            $table->text('address');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateDogsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('dogs');
+        Schema::drop('manufacturers');
     }
 }

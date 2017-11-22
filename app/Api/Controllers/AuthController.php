@@ -58,4 +58,52 @@ class AuthController extends BaseController
 
         return response()->json(compact('token'));
     }
+
+    /**
+     * Show all users
+     *
+     * Get a JSON representation of all the users
+     * 
+     * @Get('/')
+     */
+    public function index()
+    {
+        return $this->collection(User::all(), new UserTransformer);
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return $this->item(User::findOrFail($id), new UserTransformer);
+    }
+
+    /**
+     * Update the user in the database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(UserRequest $request, $id)
+    {
+        $user = User::findOrFail($id);
+        $user->update($request->only(['first_name', 'middle_name', 'last_name', 'email_address', 'mobile_phone', 'organizational_affiliation']));
+        return $user;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        return User::destroy($id);
+    }
 }

@@ -4,7 +4,7 @@ namespace Api\Requests;
 
 use Dingo\Api\Http\FormRequest;
 
-class DogRequest extends FormRequest
+class EquipmentTypeRequest extends FormRequest
 {
 	public function authorize()
 	{
@@ -15,7 +15,7 @@ class DogRequest extends FormRequest
 	{
 		return [
 	    	'name' => 'required|max:100',
-	    	'age' => 'required|numeric|between:0,40'
+	    	'description' => 'required|max:255'
     	];
 	}
 }
