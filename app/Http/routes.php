@@ -24,11 +24,17 @@ $api->version('v1', function ($api) {
 			$api->delete('manufacturers/{id}', 'ManufacturersController@destroy');
 			$api->put('manufacturers/{id}', 'ManufacturersController@update');
 
-			$api->get('equipmenttypes', 'EquipmentTypeController@index');
-			$api->post('equipmenttypes', 'EquipmentTypeController@store');
-			$api->get('equipmenttypes/{id}', 'EquipmentTypeController@show');
-			$api->delete('equipmenttypes/{id}', 'EquipmentTypeController@destroy');
-			$api->put('equipmenttypes/{id}', 'EquipmentTypeController@update');
+			$api->get('equipmenttypes', 'EquipmentTypesController@index');
+			$api->post('equipmenttypes', 'EquipmentTypesController@store');
+			$api->get('equipmenttypes/{id}', 'EquipmentTypesController@show');
+			$api->delete('equipmenttypes/{id}', 'EquipmentTypesController@destroy');
+			$api->put('equipmenttypes/{id}', 'EquipmentTypesController@update');
+
+			$api->get('facilities', 'FacilitiesController@index');
+			$api->post('facilities', 'FacilitiesController@store');
+			$api->get('facilities/{id}', 'FacilitiesController@show');
+			$api->delete('facilities/{id}', 'FacilitiesController@destroy');
+			$api->put('facilities/{id}', 'FacilitiesController@update');
 
 			$api->get('users', 'AuthController@index');
 			$api->get('users/{id}', 'AuthController@show');
